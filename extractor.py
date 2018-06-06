@@ -40,16 +40,11 @@ if status == "OK":
             # Get the HTML body payload
             msg_html = msg.get_payload(1).get_payload(decode=True)
 
-            # Save the email timestamp
-            datetime_received = datetime.fromtimestamp(
-                email.utils.mktime_tz(email.utils.parsedate_tz(msg.get('date'))))
-
             # Parse the message
             msg_parsed = BeautifulSoup(msg_html, 'html.parser')
 
             # Find the "View Gift" link
-            code_span = msg_parsed.select('span[class*="claim-code"] > span')[0].contents[1]
-            code = code_span
+            code = msg_parsed.select('span[class*="claim-code"] > span')[0].contents[1]
 
             # Print out the details to the console
             print(code)
