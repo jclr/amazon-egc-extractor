@@ -1,6 +1,6 @@
 # Amazon eGift Card Extractor
 
-This script will attempt to extract the codes in the eGC emails sent by Amazon and print it to the console.
+This script will attempt to extract the codes in the eGC emails sent by Amazon and print them to the console.
 
 ## Installation
 
