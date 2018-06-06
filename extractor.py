@@ -43,7 +43,7 @@ if status == "OK":
             # Parse the message
             msg_parsed = BeautifulSoup(msg_html, 'html.parser')
 
-            # Find the "View Gift" link
+            # Find the code
             code = msg_parsed.select('span[class*="claim-code"] > span')[0].contents[1]
 
             # Print out the details to the console
